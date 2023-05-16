@@ -116,16 +116,19 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
         chsh -s $(which zsh)
         log "$LOG_FILE" "zsh set as a default terminal"
 
+        # install oh my zsh
+        sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+
         # customize zsh
         echo "plugins=(git colored-man-pages colorize pip python brew osx)" >> ~/.zshrc
-        echo 'PROMPT="%B%F{034}%n@%m%f%b:%B%F{019}%~ %#%f%b "' >> ~/.zshrc
-        echo 'ZSH_THEME="robbyrussell"' >> ~/.zshrc
         log "$LOG_FILE" "zsh installed"
     fi 
 
     brewInstall xcode-select
     brewInstall git
     brewInstall ssh
+    brewInstall wget
     brewInstallCask rancher
     brewInstall rancher-cli
     brewInstallCask docker
