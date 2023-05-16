@@ -28,6 +28,10 @@ ansible
 terraform
 ```
 
+#### Additional
+
+Generating ssh keys and setup git config
+
 ## Support
 
 Now supporting just Mac OS, byt it's ready to add another platforms.
