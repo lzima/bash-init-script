@@ -131,6 +131,7 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
     brewInstall wget
     brewInstallCask rancher
     brewInstall rancher-cli
+    brewInstallCask lens
     brewInstallCask docker
     brewInstall docker-compose
     brewInstall kubernetes-cli
