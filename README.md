@@ -6,6 +6,7 @@ Script that installs the necessary programs and commands
 
 Before you'll run script change values in `.env.git` to your name and company email.
 ```bash
+# during first run you can be asked for password
 bash setup.sh
 ```
 
@@ -37,3 +38,11 @@ Generating ssh keys and setup git config
 ## Support
 
 Now supporting just Mac OS, byt it's ready to add another platforms.
+
+# TODO
+
+- [ ] Add support for Linux
+- [ ] Add support for Windows
+- [ ] Add support for WSL
+- [ ] Variable contains list of packages to install
+- [ ] Add support for install different programs per role
