@@ -10,6 +10,8 @@ Before you'll run script change values in `.env.git` to your name and company em
 bash setup.sh
 ```
 
+Why bash? Because it's default shell in Mac OS and Linux.
+
 ## Packages
 
 Installing following packages/programs
