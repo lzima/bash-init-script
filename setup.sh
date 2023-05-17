@@ -147,6 +147,7 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
     brewInstall ansible
     brewInstall terraform
     brewInstall teleport
+    brewInstall htop
 fi
 
 # generate ssh keys if not exists

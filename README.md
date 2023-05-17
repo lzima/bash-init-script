@@ -32,6 +32,7 @@ helm
 ansible
 terraform
 teleport
+htop
 ```
 
 #### Additional
