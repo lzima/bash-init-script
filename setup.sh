@@ -156,7 +156,7 @@ if ! [ -f ~/.ssh/id_ed25519 ]; then
 
 fi 
 
-git config --global user.name "<$FIRST_NAME $SECOND_NAME>"
-git config --global user.email "<$EMAIL>"
+git config --global user.name "$FIRST_NAME $SECOND_NAME"
+git config --global user.email "$EMAIL"
 log "$LOG_FILE" "Git config setup"
 
