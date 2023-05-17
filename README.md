@@ -4,6 +4,7 @@ Script that installs the necessary programs and commands
 
 ## Run script
 
+Before you'll run script change values in `.env.git` to your name and company email.
 ```bash
 bash setup.sh
 ```
@@ -20,6 +21,7 @@ git
 ssh
 rancher
 rancher-cli
+lens
 docker
 docker-compose
 kubernetes-cli
