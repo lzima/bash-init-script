@@ -146,6 +146,7 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
     brewInstall helm
     brewInstall ansible
     brewInstall terraform
+    brewInstall teleport
 fi
 
 # generate ssh keys if not exists
@@ -153,7 +154,6 @@ if ! [ -f ~/.ssh/id_ed25519 ]; then
     log "$LOG_FILE" "generating ssh keys"
     ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "$EMAIL" -q -N ""
     log "$LOG_FILE" "ssh keys generated"
-
 fi 
 
 git config --global user.name "$FIRST_NAME $SECOND_NAME"

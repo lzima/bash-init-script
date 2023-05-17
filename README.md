@@ -31,6 +31,7 @@ kubernetes-cli
 helm
 ansible
 terraform
+teleport
 ```
 
 #### Additional
