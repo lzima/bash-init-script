@@ -130,11 +130,19 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
     brewInstall ssh
     brewInstall wget
     brewInstallCask rancher
-    brewInstall rancher-cli
+    # issue with checking rancher-cli if is installed
+    if ! [ "$(brew list rancher-cli 2>/dev/null)" ]; then
+      brewInstall rancher-cli
+    fi
     brewInstallCask lens
-    brewInstallCask docker
+    # issue with checking docker if is installed
+    if ! [ "$(command -v docker)" ]; then
+        brewInstallCask docker
+    fi
     brewInstall docker-compose
-    brewInstall kubernetes-cli
+    if ! [ "$(command -v kubectl)" ]; then
+      brewInstall kubernetes-cli
+    fi
     brewInstall helm
     brewInstall ansible
     brewInstall terraform
@@ -144,11 +152,11 @@ fi
 if ! [ -f ~/.ssh/id_ed25519 ]; then
     log "$LOG_FILE" "generating ssh keys"
     ssh-keygen -o -a 100 -t ed25519 -f ~/.ssh/id_ed25519 -C "$EMAIL" -q -N ""
+    log "$LOG_FILE" "ssh keys generated"
+
 fi 
-log "$LOG_FILE" "ssh keys generated"
 
 git config --global user.name "<$FIRST_NAME $SECOND_NAME>"
 git config --global user.email "<$EMAIL>"
-git config --list
 log "$LOG_FILE" "Git config setup"
 
