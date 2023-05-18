@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-TMP_DIR="/tmp"
 LOG_FILE="/var/log/setup_laptop.log"
 
 OS_TYPE=""
@@ -62,9 +61,15 @@ function mergeEnvFilesAndLoad() {
 
 function brewInstall() {
     local command_name
+    local binary_name
     command_name="$1"
+    binary_name="$2"
 
-    if ! [ "$(command -v $command_name)" ]; then
+    if [ "$binary_name" == "" ]; then
+        binary_name="$command_name"
+    fi
+
+    if ! [ "$(command -v $binary_name)" ]; then
         log "$LOG_FILE" "installing $command_name"
         brew install $command_name
     fi 
@@ -130,24 +135,29 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
     brewInstall ssh
     brewInstall wget
     brewInstallCask rancher
-    # issue with checking rancher-cli if is installed
-    if ! [ "$(brew list rancher-cli 2>/dev/null)" ]; then
-      brewInstall rancher-cli
-    fi
+    brewInstall rancher-cli rancher
     brewInstallCask lens
     # issue with checking docker if is installed
     if ! [ "$(command -v docker)" ]; then
         brewInstallCask docker
     fi
     brewInstall docker-compose
-    if ! [ "$(command -v kubectl)" ]; then
-      brewInstall kubernetes-cli
-    fi
+    brewInstall kubernetes-cli kubectl
     brewInstall helm
     brewInstall ansible
     brewInstall terraform
     brewInstall teleport
     brewInstall htop
+    brewInstall azure-cli az
+    brewInstall tfsec
+    brewInstall terraform-docs
+    brewInstall asdf
+    brewInstall go-task task
+    brewInstall gnutls gnutls-cli
+    brewInstall gnu-sed sed
+    brewInstall grep
+    brewInstall jq
+    brewInstall yq
 fi
 
 # generate ssh keys if not exists

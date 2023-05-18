@@ -33,6 +33,16 @@ ansible
 terraform
 teleport
 htop
+azure-cli
+tfsec
+terraform-docs
+asdf
+go-task
+gnutls
+gnu-sed
+grep
+jq
+yq
 ```
 
 #### Additional
