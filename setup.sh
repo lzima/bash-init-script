@@ -158,6 +158,7 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
     brewInstall grep
     brewInstall jq
     brewInstall yq
+    brewInstall ncdu
 fi
 
 # generate ssh keys if not exists

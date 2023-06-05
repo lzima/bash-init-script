@@ -43,6 +43,7 @@ gnu-sed
 grep
 jq
 yq
+ncdu
 ```
 
 #### Additional
