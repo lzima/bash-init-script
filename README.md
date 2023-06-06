@@ -44,6 +44,7 @@ grep
 jq
 yq
 ncdu
+yamllint
 ```
 
 #### Additional

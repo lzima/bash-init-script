@@ -159,6 +159,9 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
     brewInstall jq
     brewInstall yq
     brewInstall ncdu
+
+    # install yaml lint plugin for asdf
+    asdf plugin add yamllint
 fi
 
 # generate ssh keys if not exists
