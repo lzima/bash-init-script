@@ -11,7 +11,7 @@ Before you'll run script change values in `.env.git` to your name and company em
 # during first run you can be asked for password
 bash setup.sh
 ```
-### One line command in temrminal
+### One line command in terminal
 In following code we can see three variables:
 
 - `FIRST_NAME`
