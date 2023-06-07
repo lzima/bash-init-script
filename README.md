@@ -2,12 +2,25 @@
 
 Script that installs the necessary programs and commands
 
-## Run script
+## Run
+
+### From repo directory
 
 Before you'll run script change values in `.env.git` to your name and company email.
 ```bash
 # during first run you can be asked for password
 bash setup.sh
+```
+### One line command in temrminal
+In following code we can see three variables:
+
+- `FIRST_NAME`
+- `SECOND_NAME`
+- `EMAIL`
+
+Change these variables and run following command
+```bash 
+bash -c "FIRST_NAME=CHANGE_ME; SECOND_NAME=CHANGE_ME; EMAIL=CHANGE_ME@cmgx.io $(curl -fsSL https://raw.githubusercontent.com/lzima/bash-init-script/main/setup.sh)"
 ```
 
 Why bash? Because it's default shell in Mac OS and Linux.
@@ -50,18 +63,6 @@ yamllint
 #### Additional
 
 Generating ssh keys and setup git config
-
-### Run
-In following code we can see three variables:
-
-- `FIRST_NAME`
-- `SECOND_NAME`
-- `EMAIL`
-
-Change these variables and run following command
-```bash 
-bash -c "FIRST_NAME=CHANGE_ME; SECOND_NAME=CHANGE_ME; EMAIL=CHANGE_ME@cmgx.io $(curl -fsSL https://raw.githubusercontent.com/lzima/bash-init-script/main/setup.sh)"
-```
 
 ## Support
 
