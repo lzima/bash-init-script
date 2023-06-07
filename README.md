@@ -51,6 +51,18 @@ yamllint
 
 Generating ssh keys and setup git config
 
+### Run
+In following code we can see three variables:
+
+- `FIRST_NAME`
+- `SECOND_NAME`
+- `EMAIL`
+
+Change these variables and run following command
+```bash 
+bash -c "FIRST_NAME=CHANGE_ME; SECOND_NAME=CHANGE_ME; EMAIL=CHANGE_ME@cmgx.io $(curl -fsSL https://raw.githubusercontent.com/lzima/bash-init-script/main/setup.sh)"
+```
+
 ## Support
 
 Now supporting just Mac OS, byt it's ready to add another platforms.
