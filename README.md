@@ -58,11 +58,28 @@ jq
 yq
 ncdu
 yamllint
+gh
 ```
 
 #### Additional
 
 Generating ssh keys and setup git config
+
+
+## Clone all repos
+
+Script clones all repos in your github organization. You can change organization name in `.env.git` file.
+
+### Login to your github account from terminal
+
+```bash 
+gh auth login
+```
+
+#### One line command in terminal
+```bash
+bash -c "GH_ORG=CHANGE_ME; $(curl -fsSL https://raw.githubusercontent.com/lzima/bash-init-script/main/clone-all-repos.sh)"
+```
 
 ## Support
 

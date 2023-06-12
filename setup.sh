@@ -159,6 +159,7 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
     brewInstall jq
     brewInstall yq
     brewInstall ncdu
+    brewInstall gh
 
     # install yaml lint plugin for asdf
     asdf plugin add yamllint
