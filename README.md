@@ -70,6 +70,8 @@ Generating ssh keys and setup git config
 
 Script clones all repos in your github organization. You can change organization name in `.env.git` file.
 
+Script will clone all repos to current directory
+
 ### Login to your github account from terminal
 
 ```bash 
