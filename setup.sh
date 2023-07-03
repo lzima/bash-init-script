@@ -167,7 +167,9 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
     echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 
     # install nodejs to install zx and then run Jan's script
-    brew install node@16
+    brewInstall node@16 node
+    echo 'export PATH="/usr/local/opt/node@16/bin:$PATH"' >> ~/.zshrc
+    source ~/.zshrc
     npm i -g zx
 fi
 
