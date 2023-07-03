@@ -59,6 +59,8 @@ yq
 ncdu
 yamllint
 gh
+nodejs@16
+zx
 ```
 
 #### Additional

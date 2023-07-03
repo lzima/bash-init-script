@@ -163,6 +163,12 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
 
     # install yaml lint plugin for asdf
     asdf plugin add yamllint
+    # https://asdf-vm.com/guide/getting-started.html
+    echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
+
+    # install nodejs to install zx and then run Jan's script
+    brew install node@16
+    npm i -g zx
 fi
 
 # generate ssh keys if not exists
