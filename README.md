@@ -61,6 +61,7 @@ yamllint
 gh
 nodejs@16
 zx
+gnupg
 ```
 
 #### Additional

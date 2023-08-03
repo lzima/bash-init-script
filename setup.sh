@@ -56,7 +56,7 @@ function mergeEnvFilesAndLoad() {
     done
 
     # load all variables from .env file
-    export $(grep -v '^#' "$base_env_file" | xargs) # TODO: issue with loading var value with whitespace (like name "Lubos Zima" -> Loaded just Lubos)
+    export "$(grep -v '^#' "$base_env_file" | xargs)" # TODO: issue with loading var value with whitespace (like name "Lubos Zima" -> Loaded just Lubos)
 }
 
 function brewInstall() {
@@ -160,6 +160,7 @@ if [ "$OS_TYPE" == "$OS_MACOSX" ]; then
     brewInstall yq
     brewInstall ncdu
     brewInstall gh
+    brewInstall gnupg
 
     # install yaml lint plugin for asdf
     asdf plugin add yamllint
