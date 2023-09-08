@@ -62,6 +62,7 @@ gh
 nodejs@16
 zx
 gnupg
+vips
 ```
 
 #### Additional
